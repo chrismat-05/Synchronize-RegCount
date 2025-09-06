@@ -67,6 +67,10 @@ class EventRegistrationDashboard {
         logoElement.alt = eventName + ' Logo';
         logoElement.src = this.getEventLogoPath(eventName);
         card.appendChild(logoElement);
+        const nameElement = document.createElement('div');
+        nameElement.className = 'event-name';
+        nameElement.textContent = eventName;
+        card.appendChild(nameElement);
         const countElement = document.createElement('div');
         countElement.className = 'registration-count';
         countElement.textContent = count;
