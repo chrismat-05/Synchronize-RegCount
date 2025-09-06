@@ -14,10 +14,11 @@ class EventRegistrationDashboard {
     }
     async fetchData() {
         try {
-            if (!CONFIG.API_URL || CONFIG.API_URL === 'YOUR_GOOGLE_APPS_SCRIPT_API_URL_HERE') {
-                throw new Error('API URL not configured. Please set your Google Apps Script URL in config.js');
+            const apiUrl = import.meta.env.VITE_API_URL;
+            if (!apiUrl) {
+                throw new Error('API URL not configured. Please set VITE_API_URL in your environment variables.');
             }
-            const response = await fetch(CONFIG.API_URL);
+            const response = await fetch(apiUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
