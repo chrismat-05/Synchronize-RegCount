@@ -196,10 +196,19 @@ footer {
 }
 
 
+
 .auto-update {
     color: #00eaff99;
     font-size: 0.875rem;
+    margin-bottom: 0.2rem;
+}
+
+.last-updated {
+    color: #00eaffcc;
+    font-size: 0.92rem;
     margin-bottom: 0.5rem;
+    font-family: 'Inter', 'Poppins', 'Montserrat', sans-serif;
+    letter-spacing: 0.01em;
 }
 
 .credits {

@@ -26,14 +26,25 @@ class EventRegistrationDashboard {
             this.hideError();
             this.hideLoading();
             this.updateEvents(data);
+            this.updateLastUpdated();
         } catch (error) {
             console.error('Failed to fetch data:', error);
             this.showError();
             this.hideLoading();
             if (Object.keys(this.currentData).length === 0) {
                 this.loadDemoData();
+                this.updateLastUpdated();
             }
         }
+    }
+
+    updateLastUpdated() {
+        const el = document.getElementById('last-updated');
+        if (!el) return;
+        const now = new Date();
+        const pad = n => n.toString().padStart(2, '0');
+        const formatted = `${pad(now.getDate())}-${pad(now.getMonth()+1)}-${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+        el.textContent = `Last updated at ${formatted}`;
     }
     loadDemoData() {
         const demoData = {
