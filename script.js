@@ -93,7 +93,7 @@ class EventRegistrationDashboard {
             'Chronoscape': 'Chronoscape.png',
         };
         const file = map[eventName] || 'Logo.png';
-        return `public/${file}`;
+        return `/${file}`;
     }
     animateCard(card) {
         const countElement = card.querySelector('.registration-count');
