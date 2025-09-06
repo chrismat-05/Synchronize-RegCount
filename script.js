@@ -90,15 +90,11 @@ class EventRegistrationDashboard {
         logoElement.src = this.getEventLogoPath(eventName);
         card.appendChild(logoElement);
 
-        const nameElement = document.createElement('div');
-        nameElement.className = 'event-name';
-        nameElement.textContent = eventName;
-
+        // Only show registration count (no event name)
         const countElement = document.createElement('div');
         countElement.className = 'registration-count';
         countElement.textContent = count;
 
-        card.appendChild(nameElement);
         card.appendChild(countElement);
 
         // Add click handler for visual feedback

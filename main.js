@@ -1,1 +1,0 @@
-// main.js is not needed for the event dashboard. All logic is in script.js

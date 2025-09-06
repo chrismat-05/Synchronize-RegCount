@@ -172,17 +172,8 @@ main {
     margin-right: auto;
 }
 
-.event-name {
-    font-family: 'Montserrat', 'Poppins', 'Inter', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #00eaff;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
-    letter-spacing: 0.01em;
-}
+
+/* .event-name removed from card, but style kept for possible future use */
 
 .registration-count {
     font-family: 'Poppins', 'Montserrat', 'Inter', sans-serif;
