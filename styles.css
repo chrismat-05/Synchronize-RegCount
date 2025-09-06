@@ -7,11 +7,15 @@
 
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Inter', 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #000;
     color: #00eaff;
     min-height: 100vh;
     line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-size: 1.08rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .site-logo-bar {
@@ -50,11 +54,13 @@ header {
 }
 
 .title {
+    font-family: 'Montserrat', 'Poppins', 'Inter', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     color: #00eaff;
     text-shadow: 0 0 30px #00eaff44, 0 0 8px #003b4a;
     animation: fadeInDown 1s ease-out;
+    letter-spacing: 0.02em;
 }
 
 /* Main content */
@@ -167,6 +173,7 @@ main {
 }
 
 .event-name {
+    font-family: 'Montserrat', 'Poppins', 'Inter', sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -174,9 +181,11 @@ main {
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
+    letter-spacing: 0.01em;
 }
 
 .registration-count {
+    font-family: 'Poppins', 'Montserrat', 'Inter', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
@@ -184,6 +193,7 @@ main {
     position: relative;
     z-index: 2;
     text-shadow: 0 0 20px #00eaff99;
+    letter-spacing: 0.01em;
 }
 
 /* Footer styles */
