@@ -82,24 +82,47 @@ class EventRegistrationDashboard {
         const card = document.createElement('div');
         card.className = 'event-card';
         card.style.animationDelay = `${index * 0.1}s`;
-        
+
+        // Add event logo
+        const logoElement = document.createElement('img');
+        logoElement.className = 'event-logo';
+        logoElement.alt = eventName + ' Logo';
+        logoElement.src = this.getEventLogoPath(eventName);
+        card.appendChild(logoElement);
+
         const nameElement = document.createElement('div');
         nameElement.className = 'event-name';
         nameElement.textContent = eventName;
-        
+
         const countElement = document.createElement('div');
         countElement.className = 'registration-count';
         countElement.textContent = count;
-        
+
         card.appendChild(nameElement);
         card.appendChild(countElement);
-        
+
         // Add click handler for visual feedback
         card.addEventListener('click', () => {
             this.animateCard(card);
         });
-        
+
         return card;
+    }
+
+    getEventLogoPath(eventName) {
+        // Map event names to logo filenames
+        const map = {
+            'IT Manager': 'IT Manager.png',
+            'CodeSustain': 'Code Sustain.png',
+            'Web Weavers': 'WebWeavers.png',
+            'Anime Quiz': 'Anime Quest.png',
+            'TechJar': 'TechJar.png',
+            'Illustra': 'Illustra.png',
+            'Sensorize': 'Sensorize.png',
+            'Chronoscape': 'Chronoscape.png',
+        };
+        const file = map[eventName] || 'Logo.png';
+        return `public/${file}`;
     }
     
     animateCard(card) {
